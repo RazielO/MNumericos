@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.metodosAbiertos.FuncionController" vgap="10" hgap="10">
+
+    <padding>
+        <Insets bottom="10" top="10"/>
+    </padding>
+
+    <Button fx:id="btnAyuda" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <graphic>
+            <FontAwesomeIconView glyphName="INFO_CIRCLE" glyphSize="20" fill="blue"/>
+        </graphic>
+    </Button>
+
+    <Label text="Función f(x)" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtFx" prefWidth="150" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label fx:id="lblGx" text="Función g(x)" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtGx" prefWidth="150" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="1">
+        <Button text="Continuar" fx:id="btnContinuar" prefWidth="90"/>
+        <Button text="Anterior" fx:id="btnAnterior"  prefWidth="90"/>
+    </HBox>
+</GridPane>

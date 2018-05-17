@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.interpolacion.ResultadosController"
+      spacing="10">
+
+    <padding>
+        <Insets topRightBottomLeft="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Label fx:id="lblResultado" prefWidth="100"/>
+        <TextField fx:id="txtResultado" editable="false"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Error" prefWidth="100"/>
+        <TextField fx:id="txtError" editable="false"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Continuar" fx:id="btnContinuar"/>
+        <Button text="Salir" fx:id="btnSalir"/>
+    </HBox>
+
+</VBox>

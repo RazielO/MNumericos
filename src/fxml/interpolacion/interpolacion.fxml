@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.interpolacion.InterpolacionController"
+          fx:id="gpTabla" alignment="CENTER">
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="0" alignment="CENTER" spacing="5">
+        <Label text="x"/>
+    </HBox>
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="1" alignment="CENTER" spacing="5">
+        <Label text="f(x)"/>
+    </HBox>
+
+    <Button fx:id="btnSiguiente" text="Siguiente"/>
+    <Button fx:id="btnAnterior" text="Anterior"/>
+
+</GridPane>

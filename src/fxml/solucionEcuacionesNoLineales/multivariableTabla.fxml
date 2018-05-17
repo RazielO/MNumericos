@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.solucionEcuacionesNoLineales.MultivariableTablaController">
+
+    <padding>
+        <Insets bottom="10" top="10" left="20" right="20"/>
+    </padding>
+
+    <center>
+        <HBox GridPane.rowIndex="0" alignment="TOP_CENTER">
+            <Text text="Resultados"/>
+        </HBox>
+
+        <HBox GridPane.rowIndex="1" spacing="5" alignment="CENTER">
+            <TableView fx:id="tblResultados">
+                <columns>
+                    <TableColumn fx:id="clmNo" text="No."/>
+                    <TableColumn fx:id="clmX" text="x"/>
+                    <TableColumn fx:id="clmY" text="y"/>
+                    <TableColumn fx:id="clmF" text="f1(x,y)"/>
+                    <TableColumn fx:id="clmG" text="f2(x,y)"/>
+                    <TableColumn fx:id="clmFx" text="F1x(x,y)"/>
+                    <TableColumn fx:id="clmFy" text="F1y(x,y)"/>
+                    <TableColumn fx:id="clmGx" text="F2x(x,y)"/>
+                    <TableColumn fx:id="clmGy" text="F2y(x,y)"/>
+                    <TableColumn fx:id="clmDx" text="Δx"/>
+                    <TableColumn fx:id="clmDy" text="Δx"/>
+                    <TableColumn fx:id="clmEx" text="Error x"/>
+                    <TableColumn fx:id="clmEy" text="Error y"/>
+                </columns>
+            </TableView>
+            <VBox spacing="5">
+                <Button fx:id="btnSeguir" text="Seguir" minWidth="150"/>
+                <Button fx:id="btnSalir" text="Salir" minWidth="150"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

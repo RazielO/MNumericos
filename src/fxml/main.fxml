@@ -1,0 +1,20 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.Screen?>
+<GridPane fx:controller="controllers.MainController" xmlns:fx="http://javafx.com/fxml"
+          alignment="center" hgap="10" vgap="10" prefWidth="300" prefHeight="150">
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen" />
+    </fx:define>
+
+    <Label text="Método" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="cmbMetodo" prefWidth="210" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
+        <Button text="Continuar" fx:id="btnContinuar" prefWidth="100"/>
+        <Button text="Cancelar" fx:id="btnCancelar" prefWidth="100"/>
+    </HBox>
+</GridPane>

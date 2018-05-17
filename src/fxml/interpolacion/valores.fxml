@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.interpolacion.ValoresController"
+      spacing="10">
+
+    <padding>
+        <Insets topRightBottomLeft="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Label text="x0" prefWidth="100"/>
+        <TextField fx:id="txtX0"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="x1" prefWidth="100"/>
+        <TextField fx:id="txtX1"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Valor buscado" prefWidth="100"/>
+        <TextField fx:id="txtX"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Valor real" prefWidth="100"/>
+        <TextField fx:id="txtReal"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="btnAnterior" text="Anterior"/>
+        <Button fx:id="btnSiguiente" text="Siguiente"/>
+    </HBox>
+
+</VBox>

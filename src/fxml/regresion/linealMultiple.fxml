@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.regresion.LinealMultipleController"
+          fx:id="gpTabla" alignment="CENTER">
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="0" alignment="CENTER" spacing="5">
+        <Label text="y"/>
+    </HBox>
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="1" alignment="CENTER" spacing="5">
+        <Label text="x1"/>
+    </HBox>
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="2" alignment="CENTER" spacing="5">
+        <Label text="x2"/>
+    </HBox>
+
+    <Button fx:id="btnSiguiente" text="Siguiente"/>
+    <Button fx:id="btnAnterior" text="Anterior"/>
+
+</GridPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.metodosAbiertos.TablaNewtonController">
+    <padding>
+        <Insets bottom="10" top="10" left="20" right="20"/>
+    </padding>
+
+    <center>
+        <HBox GridPane.rowIndex="0" alignment="TOP_CENTER">
+            <Text fx:id="titulo" text="Resultados" />
+        </HBox>
+
+        <HBox GridPane.rowIndex="1" spacing="5" alignment="CENTER">
+            <TableView fx:id="tblResultados">
+                <columns>
+                    <TableColumn fx:id="clmNo" text="No."/>
+                    <TableColumn fx:id="clmX0" text="xi"/>
+                    <TableColumn fx:id="clmFx0" text="f(xi)"/>
+                    <TableColumn fx:id="clmDfx0" text="f'(xi)"/>
+                    <TableColumn fx:id="clmX1" text="xi+1"/>
+                    <TableColumn fx:id="clmError" text="Error"/>
+                </columns>
+            </TableView>
+            <VBox spacing="5">
+                <Button fx:id="btnSeguir" text="Seguir" prefWidth="150"/>
+                <Button fx:id="btnSalir" text="Salir" prefWidth="150"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
