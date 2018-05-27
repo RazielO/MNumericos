@@ -1,5 +1,7 @@
 package controllers;
 
+import controllers.interpolacion.InterpolacionController;
+import controllers.interpolacion.ResultadoController;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -64,6 +66,9 @@ public class MainController extends Controller implements Initializable
                 new ComboBoxItem("\tNewton-Raphson multivariable", true),
                 new ComboBoxItem("Interpolación", false),
                 new ComboBoxItem("\tInterpolacion lineal", true),
+                new ComboBoxItem("\tInterpolación cuadrática", true),
+                new ComboBoxItem("\tInterpolación por diferencias divididas", true),
+                new ComboBoxItem("\tInterpolación de Lagrange", true),
                 new ComboBoxItem("Regresión", false),
                 new ComboBoxItem("\tMinimos cuadrados", true),
                 new ComboBoxItem("\tRegresión polinomial", true),
@@ -125,10 +130,16 @@ public class MainController extends Controller implements Initializable
                         case "\tMinimos cuadrados":
                         case "\tRegresión polinomial":
                         case "\tRegresión lineal multiple":
+                        case "\tInterpolación por diferencias divididas":
+                        case "\tInterpolación de Lagrange":
                             changeScene("fxml/solucionEcuaciones/mainMatriz.fxml", 325, 150, false);
                             break;
                         case "\tNewton-Raphson multivariable":
                             changeScene("fxml/solucionEcuacionesNoLineales/multivariable.fxml", 325, 225, false);
+                            break;
+                        case "\tInterpolación cuadrática":
+                            InterpolacionController.setSize(3);
+                            changeScene("fxml/interpolacion/interpolacion.fxml", 420, 275, false);
                             break;
                     }
                 }

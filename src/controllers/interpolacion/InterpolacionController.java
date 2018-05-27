@@ -25,6 +25,7 @@ public class InterpolacionController extends Controller implements Initializable
     private Map<Double, Double> map;
     private static Integer size = 0;
     public static Double[] x, y;
+    private double[][] matriz;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -56,6 +57,19 @@ public class InterpolacionController extends Controller implements Initializable
                 initArrays();
                 changeScene("fxml/regresion/resultado.fxml", 0, 0, true);
                 break;
+            case "\tInterpolación de Lagrange":
+                initMatriz();
+                ResultadoController.m = this.matriz;
+                ResultadoController.n = size;
+                changeScene("fxml/interpolacion/resultado.fxml", 350, 150, false);
+                break;
+            case "\tInterpolación cuadrática":
+            case "\tInterpolación por diferencias divididas":
+                initMatriz();
+                ResultadoController.m = this.matriz;
+                ResultadoController.n = size;
+                changeScene("fxml/interpolacion/buscado.fxml", 350, 150, false);
+                break;
         }
     }
 
@@ -70,6 +84,19 @@ public class InterpolacionController extends Controller implements Initializable
 
         for (int i = 0; i < size; i++)
             map.put(Double.parseDouble(textField[i][0].getText()), Double.parseDouble(textField[i][1].getText()));
+    }
+
+    private void initMatriz()
+    {
+        int i;
+
+        matriz = new double[2][textField.length];
+
+        for (i = 0; i < textField.length; i++)
+        {
+            matriz[0][i] = Double.parseDouble(textField[i][0].getText());
+            matriz[1][i] = Double.parseDouble(textField[i][1].getText());
+        }
     }
 
     private void initArrays()

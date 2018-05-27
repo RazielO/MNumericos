@@ -63,6 +63,8 @@ public class MainMatrizController extends Controller implements Initializable
             case "\tInterpolacion lineal":
             case "\tMinimos cuadrados":
             case "\tRegresión polinomial":
+            case "\tInterpolación de Lagrange":
+            case "\tInterpolación por diferencias divididas":
                 changeScene("fxml/interpolacion/interpolacion.fxml", width, height, false);
                 break;
             case "\tGauss":
@@ -95,6 +97,10 @@ public class MainMatrizController extends Controller implements Initializable
                break;
             case "\tRegresión lineal multiple":
                 LinealMultipleController.setSize(size);
+                break;
+            case "\tInterpolación de Lagrange":
+            case "\tInterpolación por diferencias divididas":
+                InterpolacionController.setSize(size + 1);
                 break;
         }
     }

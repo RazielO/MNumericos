@@ -1,19 +1,10 @@
 <component name="libraryTable">
   <library name="font-awesome">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-controls-8.15.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/controlsfx-8.40.11.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-emojione-2.2.7-2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-octicons-4.3.0-5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-glyphsbrowser-1.3.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-icons525-3.0.0-4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-weathericons-2.0.10-5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-fontawesome-4.7.0-5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-materialdesignfont-1.7.22-4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-materialicons-2.2.0-5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/font-awesome/fontawesomefx-commons-8.15.jar!/" />
+      <root url="file://$PROJECT_DIR$/libs/font-awesome" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/libs/font-awesome" recursive="false" />
   </library>
 </component>

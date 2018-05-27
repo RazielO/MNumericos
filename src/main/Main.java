@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import metodos.regresion.RegresionLinealMultiple;
-import metodos.regresion.RegresionPolinomial;
 
 /**
  * Clase que genera una aplicación para resolver Metodos Numericos
@@ -26,14 +24,13 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        this.primaryStage=primaryStage;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/main.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/resources/material.css");
-        primaryStage = new Stage();
-        primaryStage.setTitle("Métodos numéricos");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        this.primaryStage = new Stage();
+        this.primaryStage.setTitle("Métodos numéricos");
+        this.primaryStage.setScene(scene);
+        this.primaryStage.show();
     }
 
     /**
@@ -43,7 +40,7 @@ public class Main extends Application
      */
     public static Stage getPrimaryStage()
     {
-        return primaryStage;
+        return Main.primaryStage;
     }
 
     /**
