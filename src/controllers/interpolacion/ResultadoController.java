@@ -46,8 +46,8 @@ public class ResultadoController extends Controller implements Initializable
         switch (MainController.metodo)
         {
             case "\tInterpolación de Lagrange":
-                //Lagrange lagrange = new Lagrange(n, (int) x, m);
-                //resultado = lagrange.resultado();
+                Lagrange lagrange = new Lagrange(n-1, x, m);
+                resultado = lagrange.resultado();
                 break;
             case "\tInterpolación por diferencias divididas":
             case "\tInterpolación cuadrática":

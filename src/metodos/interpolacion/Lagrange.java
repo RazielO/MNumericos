@@ -12,11 +12,11 @@ public class Lagrange {
     }
 
     public String resultado() {
-        Double L = 1.0, F = 0.0;
+        Double L = 1.0 , F = 0.0;
         int j, i;
         for (i = 0; i <= n; i++) {
             for (j = 0; j <= n; j++) {
-                if (j != i)
+                if (j != i )
                     L = L * ((x - m[j][0]) / (m[i][0] - m[j][0]));
             }
             F = F + L * m[i][1];
