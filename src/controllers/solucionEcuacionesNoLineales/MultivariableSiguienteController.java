@@ -50,7 +50,7 @@ public class MultivariableSiguienteController extends Controller implements Init
             f2x = new ExpressionBuilder(txf2x.getText()).variables("x", "y").build();
             f2y = new ExpressionBuilder(txf2y.getText()).variables("x", "y").build();
 
-            changeScene("fxml/solucionEcuacionesNoLineales/multivariableGrafica.fxml", 0, 0, true);
+            changeScene("fxml/solucionEcuacionesNoLineales/multivariableGrafica.fxml", 500, 300, false);
         }
     }
 }
