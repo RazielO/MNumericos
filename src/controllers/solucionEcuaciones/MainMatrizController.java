@@ -69,6 +69,8 @@ public class MainMatrizController extends Controller implements Initializable
                 break;
             case "\tGauss":
             case "\tGauss-Jordan":
+            case "\tGauss-Seidel":
+            case "\tJacobi":
                 changeScene("fxml/solucionEcuaciones/matriz.fxml", width, height, false);
                 break;
             case "\tRegresión lineal multiple":
@@ -93,6 +95,8 @@ public class MainMatrizController extends Controller implements Initializable
                 break;
             case "\tGauss":
             case "\tGauss-Jordan":
+            case "\tGauss-Seidel":
+            case "\tJacobi":
                MatrizController.tam(size);
                break;
             case "\tRegresión lineal multiple":

@@ -82,13 +82,13 @@ public class MatrizController extends Controller implements Initializable
                     case "\tGauss":
                         Gauss gauss = new Gauss(matriz);
                         MatrizResultadosController.setData(aux, gauss.resolver());
-                        RresultadosController.setSize(aux);
+                        ResultadosController.setSize(aux);
                         changeScene("fxml/solucionEcuaciones/matrizResultados.fxml", width, height, false);
                         break;
                     case "\tGauss-Jordan":
                         GaussJordan gaussJordan = new GaussJordan(matriz);
                         MatrizResultadosController.setData(aux, gaussJordan.resolver());
-                        RresultadosController.setSize(aux);
+                        ResultadosController.setSize(aux);
                         changeScene("fxml/solucionEcuaciones/matrizResultados.fxml", width, height, false);
                         break;
                     case "\tJacobi":

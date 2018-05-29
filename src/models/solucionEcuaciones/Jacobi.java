@@ -2,10 +2,10 @@ package models.solucionEcuaciones;
 
 public class Jacobi
 {
-    int iteracion;
-    String[] variables;
-    String[] variablesNuevas;
-    String[] errores;
+    private int iteracion;
+    private String[] variables;
+    private String[] variablesNuevas;
+    private String[] errores;
     
     public Jacobi(int iteracion, String[] variables, String[] variablesNuevas, String[] errores)
     {

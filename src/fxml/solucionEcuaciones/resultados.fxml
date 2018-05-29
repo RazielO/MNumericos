@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.GridPane?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
-          fx:controller="controllers.solucionEcuaciones.RresultadosController"
+          fx:controller="controllers.solucionEcuaciones.ResultadosController"
           alignment="CENTER" fx:id="gridPane" vgap="10">
 
 </GridPane>

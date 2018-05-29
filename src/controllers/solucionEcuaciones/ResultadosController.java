@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 /**
  * Controlador de la ventana de matriz de resultados
  */
-public class RresultadosController extends Controller implements Initializable
+public class ResultadosController extends Controller implements Initializable
 {
     @FXML
     GridPane gridPane;
@@ -61,7 +61,7 @@ public class RresultadosController extends Controller implements Initializable
      */
     public static void setSize(int size)
     {
-        RresultadosController.size = size;
+        ResultadosController.size = size;
     }
     
     /**

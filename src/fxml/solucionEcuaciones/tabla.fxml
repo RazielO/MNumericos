@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 <BorderPane xmlns="http://javafx.com/javafx"
@@ -17,7 +16,7 @@
         </HBox>
 
         <HBox GridPane.rowIndex="1" spacing="5" alignment="CENTER">
-            <TableView fx:id="tblResultados"/>
+            <GridPane fx:id="gridPane"/>
 
             <VBox spacing="5">
                 <Button fx:id="btnSeguir" text="Seguir" minWidth="150"/>

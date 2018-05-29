@@ -28,9 +28,9 @@ public class GaussSeidel
         this.errores = new double[valores.length];
     }
     
-    public ObservableList<Jacobi> algoritmo()
+    public ObservableList<models.solucionEcuaciones.GaussSeidel> algoritmo()
     {
-        ObservableList<models.solucionEcuaciones.Jacobi> list = FXCollections.observableArrayList();
+        ObservableList<models.solucionEcuaciones.GaussSeidel> list = FXCollections.observableArrayList();
         int iteracion = 1;
         boolean flag = true;
         
@@ -64,12 +64,7 @@ public class GaussSeidel
             String[] erroresStr = toStringArray(errores);
             String[] tempStr = toStringArray(temp);
             
-            // list.add(new models.solucionEcuaciones.Jacobi(iteracion, valoresStr, tempStr, erroresStr));
-            
-            System.out.println(iteracion + " " +
-                    Arrays.toString(valoresStr) + " " +
-                    Arrays.toString(tempStr) + " " +
-                    Arrays.toString(erroresStr) + "\n");
+            list.add(new models.solucionEcuaciones.GaussSeidel(iteracion, valoresStr, tempStr, erroresStr));
             
             valores = Arrays.stream(valoresStr).mapToDouble(Double::valueOf).toArray();
             temp = Arrays.stream(tempStr).mapToDouble(Double::valueOf).toArray();
