@@ -93,7 +93,7 @@ public class MatrizController extends Controller implements Initializable
                         break;
                     case "\tJacobi":
                     case "\tGauss-Seidel":
-                        changeScene("fxml/solucionEcuaciones/valores.fxml", width, height, false);
+                        changeScene("fxml/solucionEcuaciones/valores.fxml", 350, height, false);
                         break;
                 }
             }

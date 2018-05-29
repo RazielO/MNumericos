@@ -36,6 +36,12 @@ public class ResultadoController extends Controller implements Initializable
     private Double[] x = InterpolacionController.x;
     private Double[] y = InterpolacionController.y;
 
+    /**
+     * Se llama el metodo para que se llenen la grafica con los puntos y la funcion dada.
+     *
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -46,6 +52,9 @@ public class ResultadoController extends Controller implements Initializable
         btnContinuar.setOnAction(event -> changeScene("fxml/main.fxml", 300, 125, false));
     }
 
+    /**
+     * Se inicializan los valores de r, y, f para llenar la grafica, esto según el método elegido
+     */
     private void init()
     {
         switch (MainController.metodo)
@@ -65,6 +74,12 @@ public class ResultadoController extends Controller implements Initializable
         }
     }
 
+    /**
+     * Busca el valor minimo en un array
+     *
+     * @param array Array a usar
+     * @return double Regresa el valor minimo en array
+     */
     private double min(Double[] array)
     {
         Double min = Double.MAX_VALUE;
@@ -76,6 +91,12 @@ public class ResultadoController extends Controller implements Initializable
         return min;
     }
 
+    /**
+     * Busca el valor maximo en un array
+     *
+     * @param array Array a usar
+     * @return double Regresa el valor maximo en array
+     */
     private double max(Double[] array)
     {
         Double max = Double.MIN_VALUE;

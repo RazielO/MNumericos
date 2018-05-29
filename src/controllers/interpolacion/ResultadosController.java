@@ -25,6 +25,12 @@ public class ResultadosController extends Controller implements Initializable
     private static Map<Double, Double> map;
     private static Double x0, x1, x, real;
 
+    /**
+     * Se realiza el metodo y se muestra en el TextField
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -39,26 +45,51 @@ public class ResultadosController extends Controller implements Initializable
         txtError.setText(String.format("%.6f", interpolacionLineal.error()));
     }
 
+    /**
+     * Valor del mapa
+     *
+     * @param map Valor del mapa
+     */
     public static void setMap(Map<Double, Double> map)
     {
         ResultadosController.map = map;
     }
 
+    /**
+     * Valor de x0
+     *
+     * @param x0 Valor de x0
+     */
     public static void setX0(Double x0)
     {
         ResultadosController.x0 = x0;
     }
 
+    /**
+     * Valor de x1
+     *
+     * @param x1 Valor de x1
+     */
     public static void setX1(Double x1)
     {
         ResultadosController.x1 = x1;
     }
 
+    /**
+     * Valor de x
+     *
+     * @param x Valor de x
+     */
     public static void setX(Double x)
     {
         ResultadosController.x = x;
     }
 
+    /**
+     * Valor real de f(x)
+     *
+     * @param real Valor real de f(x)
+     */
     public static void setReal(Double real)
     {
         ResultadosController.real = real;

@@ -20,6 +20,12 @@ public class MultipleResultadoController extends Controller implements Initializ
 
     private RegresionLinealMultiple regresionLinealMultiple;
 
+    /**
+     * Se llama el metodo que realiza el algoritmo y se muestra en los TextFields correspondientes.
+     *
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {

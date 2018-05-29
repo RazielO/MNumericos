@@ -18,13 +18,22 @@ public class BuscadoController extends Controller implements Initializable
     @FXML
     TextField tfX;
 
-
+    /**
+     * Se le da la accion al boton;
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
         btnContinuar.setOnAction(handler);
     }
 
+    /**
+     * Se llama cuando el boton es presionado.
+     * Se lee el valor del TextField y se manda a la siguiente escena
+     */
     private EventHandler<ActionEvent> handler = event ->
     {
         if (!tfX.getText().isEmpty())

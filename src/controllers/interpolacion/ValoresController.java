@@ -18,6 +18,12 @@ public class ValoresController extends Controller implements Initializable
 
     public static int size;
 
+    /**
+     * Se le asignan las acciones a los botones
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -28,6 +34,10 @@ public class ValoresController extends Controller implements Initializable
         btnSiguiente.setOnAction(event -> continuar());
     }
 
+    /**
+     * Se le dan los valores al controlador siguiente para que muestre los resultados.
+     * Se cambia de escena
+     */
     private void continuar()
     {
         ResultadosController.setX1(Double.valueOf(txtX1.getText()));

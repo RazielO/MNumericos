@@ -22,6 +22,13 @@ public class LinealMultipleController extends Controller implements Initializabl
     private static Integer size;
     private static double[] y, x1, x2;
 
+    /**
+     * Se inicializa una matriz de TextFields y se llama al metodo para que llene el GridPane.
+     * Se agregan botones
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -35,17 +42,28 @@ public class LinealMultipleController extends Controller implements Initializabl
         btnAnterior.setOnAction(e -> changeScene("fxml/solucionEcuaciones/mainMatriz.fxml", 325, 150, false));
     }
 
+    /**
+     * Se le da el valor a size
+     *
+     * @param size Valor de size
+     */
     public static void setSize(Integer size)
     {
         LinealMultipleController.size = size;
     }
 
+    /**
+     * Se llama al metodo para inicializar los arrays y se cambia la escena
+     */
     private void continuar()
     {
         initArrays();
         changeScene("fxml/regresion/multipleResultado.fxml", 500, 200, false);
     }
 
+    /**
+     * Los arrays de los valores de y, x1 y x2 se inicializan
+     */
     private void initArrays()
     {
         x1 = new double[size];
@@ -60,16 +78,31 @@ public class LinealMultipleController extends Controller implements Initializabl
         }
     }
 
+    /**
+     * Regresa el valor de y
+     *
+     * @return double[] Regresa el valor de y
+     */
     public static double[] getY()
     {
         return y;
     }
 
+    /**
+     * Regresa el valor de x1
+     *
+     * @return [] Regresa el valor de x1
+     */
     public static double[] getX1()
     {
         return x1;
     }
 
+    /**
+     * Regresa el valor de x2
+     *
+     * @return [] Regresa el valor de x2
+     */
     public static double[] getX2()
     {
         return x2;

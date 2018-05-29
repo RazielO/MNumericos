@@ -12,7 +12,6 @@ import metodos.interpolacion.InterpolacionNewton;
 import metodos.interpolacion.Lagrange;
 
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class ResultadoController extends Controller implements Initializable
@@ -29,6 +28,12 @@ public class ResultadoController extends Controller implements Initializable
     private String resultado;
     public static double x;
 
+    /**
+     * Se crean los botones y se llena el TextField con el resultado
+     *
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -41,12 +46,15 @@ public class ResultadoController extends Controller implements Initializable
         tfResultado.setText(resultado);
     }
 
+    /**
+     * Segun el metodo, se usa el algoritmo debido.
+     */
     private void metodo()
     {
         switch (MainController.metodo)
         {
             case "\tInterpolación de Lagrange":
-                Lagrange lagrange = new Lagrange(n-1, x, m);
+                Lagrange lagrange = new Lagrange(n - 1, x, m);
                 resultado = lagrange.resultado();
                 break;
             case "\tInterpolación por diferencias divididas":

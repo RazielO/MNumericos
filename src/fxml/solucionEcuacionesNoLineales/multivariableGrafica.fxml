@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <GridPane xmlns:fx="http://javafx.com/fxml"
           fx:controller="controllers.solucionEcuacionesNoLineales.MultivariableGraficaController"
           alignment="center" hgap="10" vgap="10">

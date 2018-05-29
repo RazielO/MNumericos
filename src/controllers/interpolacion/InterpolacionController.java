@@ -27,6 +27,12 @@ public class InterpolacionController extends Controller implements Initializable
     public static Double[] x, y;
     private double[][] matriz;
 
+    /**
+     * Se llena la tabla para leer y se crean los botones
+     *
+     * @param location  No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -40,6 +46,9 @@ public class InterpolacionController extends Controller implements Initializable
         btnAnterior.setOnAction(e -> changeScene("fxml/solucionEcuaciones/mainMatriz.fxml", 325, 150, false));
     }
 
+    /**
+     * Segun el metodo que se haya elegido, se inicializa un array, una matriz o un mapa y se cambia de escena
+     */
     private void continuar()
     {
         switch (MainController.metodo)
@@ -73,11 +82,19 @@ public class InterpolacionController extends Controller implements Initializable
         }
     }
 
+    /**
+     * Se le da el valor a size
+     *
+     * @param size Valor que se le da a size
+     */
     public static void setSize(Integer size)
     {
         InterpolacionController.size = size;
     }
 
+    /**
+     * Se inicializa un mapa con el valor de x y de y
+     */
     private void initMap()
     {
         map = new HashMap<>();
@@ -86,6 +103,9 @@ public class InterpolacionController extends Controller implements Initializable
             map.put(Double.parseDouble(textField[i][0].getText()), Double.parseDouble(textField[i][1].getText()));
     }
 
+    /**
+     * Se inicializa una matriz con los valores de x y de y
+     */
     private void initMatriz()
     {
         int i;
@@ -99,6 +119,9 @@ public class InterpolacionController extends Controller implements Initializable
         }
     }
 
+    /**
+     * Se inicializan dos arrays con los valores de x y de y
+     */
     private void initArrays()
     {
         x = new Double[size];
@@ -110,12 +133,17 @@ public class InterpolacionController extends Controller implements Initializable
             y[i] = Double.parseDouble(textField[i][1].getText());
         }
     }
-    private  void initMatrizLagrange()
+
+    /**
+     * Se inicializa una matriz con los valores de x y de y
+     */
+    private void initMatrizLagrange()
     {
         matriz = new double[size][2];
-        for(int i=0;i<size;i++){
-            for(int j=0;j<2;j++)
-               matriz[i][j]=Double.parseDouble(textField[i][j].getText());
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < 2; j++)
+                matriz[i][j] = Double.parseDouble(textField[i][j].getText());
         }
     }
 }

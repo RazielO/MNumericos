@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.metodosAbiertos.FuncionController" vgap="10" hgap="10">
 
     <padding>
