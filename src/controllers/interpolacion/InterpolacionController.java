@@ -58,10 +58,10 @@ public class InterpolacionController extends Controller implements Initializable
                 changeScene("fxml/regresion/resultado.fxml", 0, 0, true);
                 break;
             case "\tInterpolación de Lagrange":
-                initMatriz();
+                initMatrizLagrange();
                 ResultadoController.m = this.matriz;
                 ResultadoController.n = size;
-                changeScene("fxml/interpolacion/resultado.fxml", 350, 150, false);
+                changeScene("fxml/interpolacion/buscado.fxml", 350, 150, false);
                 break;
             case "\tInterpolación cuadrática":
             case "\tInterpolación por diferencias divididas":
@@ -108,6 +108,14 @@ public class InterpolacionController extends Controller implements Initializable
         {
             x[i] = Double.parseDouble(textField[i][0].getText());
             y[i] = Double.parseDouble(textField[i][1].getText());
+        }
+    }
+    private  void initMatrizLagrange()
+    {
+        matriz = new double[size][2];
+        for(int i=0;i<size;i++){
+            for(int j=0;j<2;j++)
+               matriz[i][j]=Double.parseDouble(textField[i][j].getText());
         }
     }
 }
