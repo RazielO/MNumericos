@@ -24,6 +24,12 @@ public class ValoresController extends Controller implements Initializable
 
     private static double[] vals;
 
+    /**
+     * Se inicializa la ventana
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -31,6 +37,9 @@ public class ValoresController extends Controller implements Initializable
         btnSiguiente.setOnAction(event -> changeScene("fxml/solucionEcuaciones/tabla.fxml", 0, 0, true));
     }
 
+    /**
+     * Inicializa la ventana
+     */
     private void initWindow()
     {
         int i;
@@ -64,7 +73,12 @@ public class ValoresController extends Controller implements Initializable
         vbox.getChildren().add(hBox);
     }
 
-    public static double[] getVals()
+    /**
+     * Obtiene los valors que el usuario ingreso
+     *
+     * @return double[] Regresa una matriz con los valores
+     */
+    static double[] getVals()
     {
         int size = MainMatrizController.size;
         int i;
@@ -76,6 +90,11 @@ public class ValoresController extends Controller implements Initializable
         return vals;
     }
 
+    /**
+     * Regresa el error permitido
+     *
+     * @return double Regresa el error permitido
+     */
     public static double getEp()
     {
         return Double.parseDouble(ep.getText());

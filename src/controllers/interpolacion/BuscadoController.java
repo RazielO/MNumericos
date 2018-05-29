@@ -18,6 +18,7 @@ public class BuscadoController extends Controller implements Initializable
     @FXML
     TextField tfX;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {

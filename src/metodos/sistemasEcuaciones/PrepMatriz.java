@@ -8,6 +8,11 @@ public class PrepMatriz
     Expression[] expressions = null;
     Double[][] matriz;
 
+    /**
+     * Regresa la matriz preparada
+     *
+     * @return Expression[] Regresa las expresiones listas
+     */
     public Expression[] getExpressions()
     {
         if (expressions == null)
@@ -15,21 +20,32 @@ public class PrepMatriz
         return expressions;
     }
 
-    public void setExpressions(Expression[] expressions)
-    {
-        this.expressions = expressions;
-    }
-
+    /**
+     * Regresa la matriz
+     *
+     * @return Double[][]
+     */
     public Double[][] getMatriz()
     {
         return matriz;
     }
 
+    /**
+     * Da el valor a la matriz
+     *
+     * @param matriz Matriz a dar el valor
+     */
     public void setMatriz(Double[][] matriz)
     {
         this.matriz = matriz;
     }
 
+    /**
+     * Metodo que prepara la matriz
+     *
+     * @param matriz Matriz a preparar
+     * @return Expression[] Regresa la matriz preparada
+     */
     protected Expression[] prepararMatriz(Double[][] matriz)
     {
         int i, j, apuntador;

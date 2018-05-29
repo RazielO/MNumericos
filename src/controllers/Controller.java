@@ -165,6 +165,16 @@ public class Controller
         alertMessage(ayuda, "Ayuda", Alert.AlertType.INFORMATION, "Ayuda");
     }
 
+    /**
+     * Agrega una funcion y puntos a una grafica
+     *
+     * @param lineChart Grafica a llenar
+     * @param x Valores de los puntos en x
+     * @param y Valores de los puntos en y
+     * @param f Funcion f(x)
+     * @param min Valor desde el que se empieza a graficar
+     * @param max Valor desde hasta el que se grafica
+     */
     protected void initPuntosGrafica(LineChart lineChart, Double[] x, Double[] y, Expression f, double min, double max)
     {
         XYChart.Series series = new XYChart.Series();
@@ -185,6 +195,13 @@ public class Controller
         lineChart.getData().add(fx);
     }
 
+    /**
+     * Genera una tabla de textfields
+     *
+     * @param aux Tamaño de la tabla
+     * @param textField Matriz de textfields a crear
+     * @param gpMatriz GridPane donde se guarda la tabla
+     */
     public void tabla(int aux, TextField[][] textField, GridPane gpMatriz)
     {
         for(int i=0;i<aux;i++)
@@ -200,6 +217,13 @@ public class Controller
             }
     }
 
+    /**
+     * Genera una tabla de textfields
+     *
+     * @param aux Tamaño de la tabla
+     * @param textField Matriz de textfields a crear
+     * @param gpMatriz GridPane donde se guarda la tabla
+     */
     public void tablaMultivariable(int aux, TextField[][] textField, GridPane gpMatriz)
     {
         for(int i=0;i<aux;i++)

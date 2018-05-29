@@ -12,6 +12,19 @@ public class NewtonRaphsonMultivariable
     Expression f, g, Fx, Fy, Gx, Gy;
     double evalF, evalG, evalFx, evalFy, evalGx, evalGy, x, y, deltaX, deltaY, errorX, errorY, x1, y1, ep;
 
+    /**
+     * Constructor de la clase
+     *
+     * @param f Funcion f
+     * @param g Funcion g
+     * @param fx Derivada parcial en x de f
+     * @param fy Derivada parcial en y de f
+     * @param gx Derivada parcial en x de g
+     * @param gy Derivada parcial en y de g
+     * @param x Valor inicial de x
+     * @param y Valor inicial de y
+     * @param ep Error permitido
+     */
     public NewtonRaphsonMultivariable(Expression f, Expression g, Expression fx, Expression fy, Expression gx, Expression gy, double x, double y, double ep)
     {
         this.f = f;
@@ -25,16 +38,34 @@ public class NewtonRaphsonMultivariable
         this.ep = ep;
     }
 
+    /**
+     * Calcula el error
+     *
+     * @param actual Valor actual
+     * @param anterior Valor anterior
+     * @return Double error relativo entre los valores
+     */
     private double calcularError(double actual, double anterior)
     {
         return Math.abs((actual - anterior) / actual) * 100;
     }
 
+    /**
+     * Genera el nuevo valor
+     *
+     * @param delta Valor de delta
+     * @param anterior Valor anterior
+     *
+     * @return double Regresa el nuevo valor
+     */
     private double nuevoValor(double delta, double anterior)
     {
         return anterior + delta;
     }
 
+    /**
+     * Evalua las funciones en los puntos x y
+     */
     private void evaluar()
     {
         Map<String, Double> vars = new HashMap<>();
@@ -49,12 +80,20 @@ public class NewtonRaphsonMultivariable
         evalGy = Gy.setVariables(vars).evaluate();
     }
 
+    /**
+     * Calculo de deltas para los nuevos valores
+     */
     private void calcularDeltas()
     {
         deltaX = ((evalG * evalFy) - (evalF * evalGy)) / ((evalFx * evalGy) - (evalGx * evalFy));
         deltaY = ((evalF * evalGx) - (evalG * evalFx)) / ((evalFx * evalGy) - (evalGx * evalFy));
     }
 
+    /**
+     * Realiza el algoritmo Newton-Raphson multivariable
+     *
+     * @return List Regresa un lista de modelos con los resultados
+     */
     public ObservableList<models.solucionEcuacionesNoLineales.NewtonRaphsonMultivariable> algoritmo()
     {
         boolean flag = true;

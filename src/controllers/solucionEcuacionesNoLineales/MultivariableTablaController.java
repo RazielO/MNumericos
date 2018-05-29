@@ -23,6 +23,12 @@ public class MultivariableTablaController extends Controller implements Initiali
 
     metodos.solucionEcuacionesNoLineales.NewtonRaphsonMultivariable nr;
 
+    /**
+     * Se llama cuando la ventana se inicia. Se llena la tabla con los valores
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {

@@ -1,5 +1,9 @@
 package models.solucionEcuacionesNoLineales;
 
+/**
+ * Clase modelo para mostrar los resultados de Newton-Raphson multivariable.
+ * Contiene unicamente el constructor y todos sus getters y setters.
+ */
 public class NewtonRaphsonMultivariable
 {
     int iteracion;

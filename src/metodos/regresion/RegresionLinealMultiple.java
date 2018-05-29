@@ -10,6 +10,13 @@ public class RegresionLinealMultiple
     private GaussJordan gaussJordan;
     private double[][] matriz;
 
+    /**
+     * Constructor de la clase
+     *
+     * @param y Valores de y
+     * @param x1 Valores de x1
+     * @param x2 Valores de x2
+     */
     public RegresionLinealMultiple(double[] y, double[] x1, double[] x2)
     {
         this.y = y;
@@ -23,6 +30,9 @@ public class RegresionLinealMultiple
         calcularSr();
     }
 
+    /**
+     * Calcula la media de y
+     */
     private void calcularYMed()
     {
         yMed = 0;
@@ -34,6 +44,11 @@ public class RegresionLinealMultiple
         yMed = yMed / y.length;
     }
 
+    /**
+     * Calcula st
+     *
+     * @return double Regresa st
+     */
     private void calcularSt()
     {
         int i;
@@ -43,6 +58,11 @@ public class RegresionLinealMultiple
             st = Math.pow((y[1] - yMed), 2);
     }
 
+    /**
+     * Calcula sr
+     *
+     * @return double Regresa sr
+     */
     private void calcularSr()
     {
         if (res == null)
@@ -54,6 +74,13 @@ public class RegresionLinealMultiple
             sr = sr + Math.pow((y[i] - res[0] - res[1]*x1[i] - res[2]*x2[i]), 2);
     }
 
+    /**
+     * Sumatoria de x*y
+     *
+     * @param a Valores de x
+     * @param b Valores de y
+     * @return double Regresa la sumatoria de x*y
+     */
     private double sumatoriaXY(double[] a, double[] b)
     {
         double res = 0;
@@ -65,6 +92,13 @@ public class RegresionLinealMultiple
         return res;
     }
 
+    /**
+     * Sumatoria de x^p
+     *
+     * @param x Valores de x
+     * @param potencia Valor de la potencia
+     * @return double Regresa la sumatoria de x^p
+     */
     private double sumatoriaXpow(double[] x, int potencia)
     {
         double res = 0;
@@ -76,6 +110,13 @@ public class RegresionLinealMultiple
         return res;
     }
 
+    /**
+     * Sumatoria de un array
+     *
+     * @param x Array a sumar
+     *
+     * @return double Regresa la sumatoria del array
+     */
     private double sumatoriaX(double[] x)
     {
         double res = 0;
@@ -87,6 +128,9 @@ public class RegresionLinealMultiple
         return res;
     }
 
+    /**
+     * Llena la matriz con sumatorias
+     */
     private void llenarMatriz()
     {
 
@@ -107,6 +151,11 @@ public class RegresionLinealMultiple
         matriz[2][3] = sumatoriaXY(x2, y);
     }
 
+    /**
+     * Calcula la ecuacion
+     *
+     * @return String Regresa la ecuacion
+     */
     public String resultado()
     {
         String resultado = "";
@@ -138,6 +187,11 @@ public class RegresionLinealMultiple
         return resultado.trim();
     }
 
+    /**
+     * Calcula que tan buena fue la aproximacion
+     *
+     * @return String Regresa el valor de r
+     */
     public String calcularR()
     {
         r = Math.sqrt((st - sr) / st);

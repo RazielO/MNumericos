@@ -29,6 +29,12 @@ public class TablaController extends Controller implements Initializable
     private ObservableList<models.solucionEcuaciones.GaussSeidel> listaGauss;
     private TextField[][] textFields;
 
+    /**
+     * Manda llamar el metodo para inicializar la tabla
+     *
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -38,6 +44,9 @@ public class TablaController extends Controller implements Initializable
         initTable();
     }
 
+    /**
+     * Realiza el algoritmo indicado y manda llamar al metodo para que llene las columnas
+     */
     private void initTable()
     {
         switch (MainController.metodo)
@@ -61,6 +70,9 @@ public class TablaController extends Controller implements Initializable
         }
     }
 
+    /**
+     * Llena un GridPane con TextFields para mostrar los resultados
+     */
     private void columnasJacobi()
     {
         int i, j;
@@ -103,6 +115,9 @@ public class TablaController extends Controller implements Initializable
             }
     }
 
+    /**
+     * Llena un GridPane con TextFields para mostrar los resultados
+     */
     private void columnasSeidel()
     {
         int i, j;

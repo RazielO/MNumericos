@@ -15,8 +15,6 @@ import java.util.ResourceBundle;
 public class MultivariableGraficaController extends Controller implements Initializable
 {
     @FXML
-    LineChart lncGrafica;
-    @FXML
     TextField txtX0, txtY0, txtEp;
     @FXML
     Button btnContinuar, btnAnterior;

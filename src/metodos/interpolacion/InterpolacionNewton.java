@@ -7,6 +7,14 @@ public class InterpolacionNewton
     private double fxint, xint;
     private double[][] matriz;
 
+    /**
+     * Constructor de la clase
+     *
+     * @param x Valores de x
+     * @param fx Valores de f(x)
+     * @param n Grado del polinomio
+     * @param xint Valor buscado
+     */
     public InterpolacionNewton(double[] x, double[] fx, int n, double xint)
     {
         this.x = x;
@@ -17,6 +25,9 @@ public class InterpolacionNewton
         matriz = new double[n - 1][n - 1];
     }
 
+    /**
+     * Hace la busqueda de f(x)
+     */
     public void algoritmo()
     {
         double p;
@@ -38,6 +49,16 @@ public class InterpolacionNewton
         }
     }
 
+    /**
+     * Llena una matriz con las diferencias divididas
+     *
+     * @param n Grado del polinomio
+     * @param t Matriz a llenar
+     * @param x Valores de x
+     * @param f Valores de f(x)
+     *
+     * @return double[][] Regresa una matriz con diferencias divididas
+     */
     private double[][] diferencias(int n, double[][] t, double[] x, double[] f)
     {
         int m = n - 1;
@@ -53,6 +74,11 @@ public class InterpolacionNewton
         return t;
     }
 
+    /**
+     * Regresa el resultado aproximado de f(x)
+     *
+     * @return double Regresa el resultado aproximado de f(x)
+     */
     public double getResultado()
     {
         algoritmo();

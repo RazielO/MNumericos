@@ -1,5 +1,9 @@
 package models.solucionEcuaciones;
 
+/**
+ * Clase modelo para mostrar los resultados de Gauss-Seidel.
+ * Contiene unicamente el constructor y todos sus getters y setters.
+ */
 public class GaussSeidel
 {
     int iteracion;

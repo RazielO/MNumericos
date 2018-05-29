@@ -11,6 +11,13 @@ public class RegresionPolinomial
     private String[] resultados;
     private GaussJordan gaussJordan;
 
+    /**
+     * Constructor de la clase
+     *
+     * @param x Valores de x
+     * @param y Valores de y
+     * @param orden Orden del polinomio
+     */
     public RegresionPolinomial(Double[] x, Double[] y, Integer orden)
     {
         this.x = x;
@@ -22,6 +29,15 @@ public class RegresionPolinomial
         yMed = 0;
     }
 
+    /**
+     * Sumatoria de X^m * Y
+     *
+     * @param x Valores de x
+     * @param y Valores de y
+     * @param m Valor de m
+     *
+     * @return Double Sumatoria de X^m * Y
+     */
     private Double sumatoriaXmY(Double[] x, Double[] y, Integer m)
     {
         Double resultado = 0.0;
@@ -33,6 +49,14 @@ public class RegresionPolinomial
         return resultado;
     }
 
+    /**
+     * Sumatoria de x^m
+     *
+     * @param x Valores de x
+     * @param m Valor de m
+     *
+     * @return Double Sumatoria de x^m
+     */
     private Double sumatoriaXm(Double[] x, Integer m)
     {
         Double resultado = 0.0;
@@ -45,6 +69,9 @@ public class RegresionPolinomial
         return resultado;
     }
 
+    /**
+     * Llena la matriz con sumatorias
+     */
     private void llenarMatriz()
     {
         int i, j;
@@ -61,6 +88,9 @@ public class RegresionPolinomial
         }
     }
 
+    /**
+     * Calcula la media de x, y
+     */
     private void calcMed()
     {
         int i;
@@ -75,6 +105,11 @@ public class RegresionPolinomial
         yMed = yMed / y.length;
     }
 
+    /**
+     * Calcula st
+     *
+     * @return double Regresa st
+     */
     private double calcularSt()
     {
         double st = 0;
@@ -86,6 +121,11 @@ public class RegresionPolinomial
         return st;
     }
 
+    /**
+     * Calcula sr
+     *
+     * @return double Regresa sr
+     */
     private double calcularSr()
     {
         double sr = 0;
@@ -97,6 +137,13 @@ public class RegresionPolinomial
         return sr;
     }
 
+    /**
+     * Hace las iteraciones de sr;
+     *
+     * @param x1 Valor de xi
+     * @param y1 Valor de yi
+     * @return double Regresa una evaluacion de sr
+     */
     private double evalSr(double x1, double y1)
     {
         double eval = y1;
@@ -108,6 +155,11 @@ public class RegresionPolinomial
         return eval;
     }
 
+    /**
+     * Calcula la ecuacion
+     *
+     * @return String Regresa la ecuacion
+     */
     public String resultado()
     {
         String ecuacion = "";
@@ -135,6 +187,11 @@ public class RegresionPolinomial
         return ecuacion;
     }
 
+    /**
+     * Calcula que tan buena fue la aproximacion
+     *
+     * @return String Regresa el valor de r
+     */
     public String calcularR()
     {
         resultado();

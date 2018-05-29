@@ -5,6 +5,12 @@ public class MinimosCuadrados
     private Double[] x, y;
     private Double mediaX, mediaY, a1, a0, xy, x2, sr, st, sumX, sumY, r;
 
+    /**
+     * Constructor de la clase
+     *
+     * @param x Valores de x
+     * @param y Valores de y
+     */
     public MinimosCuadrados(Double[] x, Double[] y)
     {
         this.x = x;
@@ -21,6 +27,11 @@ public class MinimosCuadrados
         a0 = Double.parseDouble(String.format("%.6f",calcularA0()));
     }
 
+    /**
+     * Calcula a1
+     *
+     * @return double Valor de a1
+     */
     private double calcularA1()
     {
         int i;
@@ -38,6 +49,11 @@ public class MinimosCuadrados
         return (aux1 / aux2);
     }
 
+    /**
+     * Calcula a0
+     *
+     * @return double Regesa el valor de a0
+     */
     private double calcularA0()
     {
         mediaX = sumX / x.length;
@@ -46,6 +62,11 @@ public class MinimosCuadrados
         return (mediaY - (a1 * mediaX));
     }
 
+    /**
+     * Calcula que tan buena fue la aproximacion
+     *
+     * @return String Regresa el valor de r
+     */
     public String calcularR()
     {
         int i;
@@ -61,6 +82,11 @@ public class MinimosCuadrados
         return String.format("%.6f", r);
     }
 
+    /**
+     * Calcula la ecuacion
+     *
+     * @return String Regresa la ecuacion
+     */
     public String resultado()
     {
         calcularA0();

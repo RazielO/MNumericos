@@ -15,7 +15,14 @@ public class GaussSeidel
     double ep;
     double[] valores, errores;
     Expression[] expressions;
-    
+
+    /**
+     * Constructor de la clase
+     *
+     * @param matriz Matriz a resolver
+     * @param ep Error permitido
+     * @param valores Valores iniciales
+     */
     public GaussSeidel(Double[][] matriz, double ep, double[] valores)
     {
         PrepMatriz prepMatriz = new PrepMatriz();
@@ -27,7 +34,12 @@ public class GaussSeidel
         this.expressions = prepMatriz.getExpressions();
         this.errores = new double[valores.length];
     }
-    
+
+    /**
+     * Algoritmo de Gauss-Seidel
+     *
+     * @return List Regresa una lista de modelos con los resultados
+     */
     public ObservableList<models.solucionEcuaciones.GaussSeidel> algoritmo()
     {
         ObservableList<models.solucionEcuaciones.GaussSeidel> list = FXCollections.observableArrayList();
@@ -76,7 +88,15 @@ public class GaussSeidel
         
         return list;
     }
-    
+
+    /**
+     * Decide si continuar o no el metodo
+     *
+     * @param anterior Valores anteriores
+     * @param nuevo Valores nuevos
+     * @param ep Error permitido
+     * @return boolean Regresa si el metodo debe de continuar
+     */
     private boolean continuar(double[] anterior, double[] nuevo, double ep)
     {
         int i;
@@ -90,12 +110,25 @@ public class GaussSeidel
         }
         return flag;
     }
-    
+
+    /**
+     * Calcula el error relativo
+     *
+     * @param ant Valor anterior
+     * @param act Valor actual
+     * @return double Regresa el error
+     */
     private double error(double ant, double act)
     {
         return Math.abs((act - ant) / act) * 100;
     }
-    
+
+    /**
+     * Convierte un array de dobles a string
+     *
+     * @param array Array a convertir
+     * @return String[] Regresa el array convertido a string
+     */
     private String[] toStringArray(double[] array)
     {
         String[] nuevo = new String[array.length];

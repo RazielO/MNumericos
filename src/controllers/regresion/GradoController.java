@@ -21,12 +21,21 @@ public class GradoController extends Controller implements Initializable
 
     public static Integer grado;
 
+    /**
+     * Da el handler al boton
+     *
+     * @param location No se usa
+     * @param resources No se usa
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
         btnSiguiente.setOnAction(handler);
     }
 
+    /**
+     * Si se ingreso el valor, se cambia de pantalla
+     */
     private EventHandler<ActionEvent> handler = event ->
     {
         if (txtGrado.getText().isEmpty())
